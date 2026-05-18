@@ -1,51 +1,40 @@
+<!-- ========================= -->
+<!-- COLE NO index.html -->
+<!-- ========================= -->
+
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nós Dois ❤️</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nós Dois 💜</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
-  <script>
-  const dataNamoro = new Date("2026-03-04 00:00:00");
 
-  function atualizarContador() {
-    const agora = new Date();
-
-    const diferenca = agora - dataNamoro;
-
-    const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
-
-    const horas = Math.floor(
-      (diferenca / (1000 * 60 * 60)) % 24
-    );
-
-    const minutos = Math.floor(
-      (diferenca / (1000 * 60)) % 60
-    );
-
-    const segundos = Math.floor(
-      (diferenca / 1000) % 60
-    );
-
-    document.getElementById("timer").innerHTML =
-      `${dias} dias 💜 ${horas}h ${minutos}m ${segundos}s`;
-  }
-
-  setInterval(atualizarContador, 1000);
-
-  atualizarContador();
-</script>
 <body>
 
   <div class="hearts"></div>
 
   <section class="hero">
-    <h1>❤️ Nossa História ❤️</h1>
+    <h1>💜 Nossa História 💜</h1>
+
     <p>
       Cada momento ao seu lado virou minha lembrança favorita.
     </p>
   </section>
 
+  <!-- CONTADOR -->
+  <section class="contador">
+    <h2>💜 Estamos juntos há 💜</h2>
+
+    <div id="timer">
+      Carregando...
+    </div>
+  </section>
+
+  <!-- GALERIA -->
   <section class="gallery">
 
     <div class="card">
@@ -62,27 +51,60 @@
 
   </section>
 
+  <!-- MENSAGEM -->
   <section class="message">
+
     <h2>Para você 💌</h2>
 
     <p>
       Obrigado por existir na minha vida.
       Você transforma dias simples em momentos inesquecíveis.
-      Esse site é só um pedacinho do quanto eu amo você ❤️
+      Esse site é só um pedacinho do quanto eu amo você 💜
     </p>
+
   </section>
 
   <footer>
     Feito com amor ✨
   </footer>
 
+  <!-- SCRIPT CONTADOR -->
+  <script>
+
+    const dataNamoro = new Date("2024-01-01 00:00:00");
+
+    function atualizarContador() {
+
+      const agora = new Date();
+
+      const diferenca = agora - dataNamoro;
+
+      const dias = Math.floor(
+        diferenca / (1000 * 60 * 60 * 24)
+      );
+
+      const horas = Math.floor(
+        (diferenca / (1000 * 60 * 60)) % 24
+      );
+
+      const minutos = Math.floor(
+        (diferenca / (1000 * 60)) % 60
+      );
+
+      const segundos = Math.floor(
+        (diferenca / 1000) % 60
+      );
+
+      document.getElementById("timer").innerHTML =
+        `${dias} dias 💜 ${horas}h ${minutos}m ${segundos}s`;
+
+    }
+
+    setInterval(atualizarContador, 1000);
+
+    atualizarContador();
+
+  </script>
+
 </body>
 </html>
-<link rel="stylesheet" href="style.css">
-<section class="contador">
-  <h2>💜 Estamos juntos há 💜</h2>
-
-  <div id="timer">
-    Carregando...
-  </div>
-</section>
