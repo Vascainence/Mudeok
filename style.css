@@ -223,3 +223,63 @@ footer{
   z-index:999;
   border-radius:20px;
 }
+/* CHUVA DE CORAÇÕES */
+
+.heart-rain{
+  position:fixed;
+  width:100%;
+  height:100vh;
+  top:0;
+  left:0;
+  pointer-events:none;
+  overflow:hidden;
+  z-index:-1;
+}
+
+.heart-rain::before{
+  content:"💜 💜 💜 💜 💜 💜 💜 💜 💜";
+  position:absolute;
+  top:-10%;
+  left:0;
+  width:100%;
+  font-size:30px;
+  animation:fall 15s linear infinite;
+  opacity:0.35;
+  letter-spacing:40px;
+}
+
+.heart-rain::after{
+  content:"💜 💜 💜 💜 💜 💜 💜";
+  position:absolute;
+  top:-20%;
+  left:-10%;
+  width:120%;
+  font-size:22px;
+  animation:fall2 20s linear infinite;
+  opacity:0.25;
+  letter-spacing:60px;
+}
+
+@keyframes fall{
+
+  0%{
+    transform:translateY(-100vh);
+  }
+
+  100%{
+    transform:translateY(200vh);
+  }
+
+}
+
+@keyframes fall2{
+
+  0%{
+    transform:translateY(-120vh) rotate(0deg);
+  }
+
+  100%{
+    transform:translateY(220vh) rotate(360deg);
+  }
+
+}
