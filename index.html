@@ -154,25 +154,4 @@
 
 <script>
 
-  const button = document.getElementById("playMusic");
-  const music = document.getElementById("music");
-
-  button.addEventListener("click", async () => {
-
-    try {
-
-      await music.play();
-
-      button.innerHTML = "🎵 Música Tocando";
-
-    } catch(error) {
-
-      alert("Erro ao tocar música 💜");
-
-      console.log(error);
-
-    }
-
-  });
-
 </script>
