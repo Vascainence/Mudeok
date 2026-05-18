@@ -107,9 +107,9 @@ function abrirCarta(){
 
   </div>
 
-  <button id="openLetter">
-    💜 Abrir Carta
-  </button>
+<button id="openLetter" class="letter-btn">
+  💜 Abrir Carta
+</button>
 
 </section>
 
@@ -167,6 +167,21 @@ function abrirCarta(){
     atualizarContador();
 
   </script>
+  <script>
+
+const btn =
+document.getElementById("openLetter");
+
+const envelope =
+document.getElementById("envelope");
+
+btn.addEventListener("click",()=>{
+
+  envelope.classList.toggle("open");
+
+});
+
+</script>
 
 </body>
 
