@@ -13,6 +13,20 @@
 
   <link rel="stylesheet" href="style.css">
 </head>
+  <script>
+
+  const button = document.getElementById("playMusic");
+  const music = document.getElementById("music");
+
+  button.addEventListener("click", () => {
+
+    music.play();
+
+    button.innerHTML = "🎵 Música Tocando";
+
+  });
+
+</script>
 
 <body>
   <!-- PARTÍCULAS -->
