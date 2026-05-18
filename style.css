@@ -214,3 +214,12 @@ footer{
   }
 
 }
+#music{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:260px;
+  opacity:0.9;
+  z-index:999;
+  border-radius:20px;
+}
