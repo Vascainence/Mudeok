@@ -150,14 +150,30 @@ footer{
 
 /* PLAYER DE MÚSICA */
 
-#music{
+/* PLAYER */
+
+.music-box{
   position:fixed;
   bottom:20px;
   right:20px;
-  width:260px;
-  opacity:0.9;
   z-index:999;
-  border-radius:20px;
+}
+
+#playMusic{
+  background:linear-gradient(45deg,#7b2cbf,#c77dff);
+  border:none;
+  padding:15px 25px;
+  border-radius:30px;
+  color:white;
+  font-size:1rem;
+  font-weight:bold;
+  cursor:pointer;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  transition:0.4s;
+}
+
+#playMusic:hover{
+  transform:scale(1.08);
 }
 
 /* CHUVA DE CORAÇÕES */
