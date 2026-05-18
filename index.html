@@ -5,6 +5,36 @@
   <title>Nós Dois ❤️</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+  <script>
+  const dataNamoro = new Date("2026-03-04 00:00:00");
+
+  function atualizarContador() {
+    const agora = new Date();
+
+    const diferenca = agora - dataNamoro;
+
+    const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+
+    const horas = Math.floor(
+      (diferenca / (1000 * 60 * 60)) % 24
+    );
+
+    const minutos = Math.floor(
+      (diferenca / (1000 * 60)) % 60
+    );
+
+    const segundos = Math.floor(
+      (diferenca / 1000) % 60
+    );
+
+    document.getElementById("timer").innerHTML =
+      `${dias} dias 💜 ${horas}h ${minutos}m ${segundos}s`;
+  }
+
+  setInterval(atualizarContador, 1000);
+
+  atualizarContador();
+</script>
 <body>
 
   <div class="hearts"></div>
@@ -49,3 +79,10 @@
 </body>
 </html>
 <link rel="stylesheet" href="style.css">
+<section class="contador">
+  <h2>💜 Estamos juntos há 💜</h2>
+
+  <div id="timer">
+    Carregando...
+  </div>
+</section>
