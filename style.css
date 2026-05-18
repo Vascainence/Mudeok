@@ -411,72 +411,58 @@ body::after{
 
 }
 /* ========================= */
-/* CARTINHA */
+/* CARTINHA PREMIUM */
 /* ========================= */
 
 .letter-section{
+
   display:flex;
-  justify-content:center;
+
+  flex-direction:column;
+
   align-items:center;
-  padding:100px 20px;
+
+  justify-content:center;
+
+  padding:120px 20px;
+
+  position:relative;
+
+  z-index:10;
+
 }
 
 .envelope{
+
   position:relative;
+
   width:320px;
+
   height:220px;
-  cursor:pointer;
-  transition:0.5s;
+
 }
 
-.envelope:hover{
-  transform:scale(1.05);
-}
-
-.front{
-  position:relative;
-z-index:2;
-  position:absolute;
-  width:100%;
-  height:100%;
-  background:linear-gradient(135deg,#7b2cbf,#c77dff);
-  border-radius:15px;
-  box-shadow:0 20px 40px rgba(0,0,0,0.35);
-  overflow:hidden;
-}
-
-.front::before{
-  content:'';
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:
-  linear-gradient(
-    135deg,
-    transparent 50%,
-    rgba(255,255,255,0.15) 50%
-  );
-}
+/* CARTA */
 
 .letter{
 
   position:absolute;
 
-  top:0;
-  left:0;
+  width:90%;
 
-  width:100%;
-  height:100%;
+  height:90%;
+
+  top:5%;
+
+  left:5%;
 
   background:white;
-
-  color:#5a189a;
 
   border-radius:20px;
 
   padding:25px;
+
+  color:#5a189a;
 
   text-align:center;
 
@@ -488,13 +474,104 @@ z-index:2;
 
   align-items:center;
 
-  transform:translateY(0);
-
   transition:0.8s ease;
 
-  z-index:-1;
+  transform:translateY(0);
 
-  opacity:0;
+  z-index:1;
 
 }
+
+.letter h2{
+
+  margin-bottom:15px;
+
+}
+
+.letter p{
+
+  line-height:1.7;
+
+}
+
+/* FRENTE DO ENVELOPE */
+
+.front{
+
+  position:absolute;
+
+  width:100%;
+
+  height:100%;
+
+  background:
+  linear-gradient(
+    135deg,
+    #7b2cbf,
+    #c77dff
+  );
+
+  border-radius:20px;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  font-size:4rem;
+
+  z-index:2;
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.35);
+
+}
+
+/* ABRIR CARTA */
+
+.envelope.open .letter{
+
+  transform:translateY(-160px);
+
+}
+
+/* BOTÃO */
+
+.letter-btn{
+
+  margin-top:35px;
+
+  background:
+  linear-gradient(
+    45deg,
+    #7b2cbf,
+    #c77dff
+  );
+
+  border:none;
+
+  color:white;
+
+  padding:16px 35px;
+
+  border-radius:40px;
+
+  font-size:1rem;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:0.4s;
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.3);
+
+}
+
+.letter-btn:hover{
+
+  transform:scale(1.08);
+
 }
