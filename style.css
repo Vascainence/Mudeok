@@ -83,37 +83,195 @@ body{
 
 /* GALERIA */
 
+/* ========================= */
+/* GALERIA POLAROID PREMIUM */
+/* ========================= */
+
 .gallery{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  justify-content:center;
+
+  align-items:center;
+
+  gap:50px;
+
   max-width:1200px;
+
   margin:auto;
-  padding:50px 40px;
+
+  padding:100px 30px;
+
 }
+
+/* POLAROID */
 
 .card{
-  overflow:hidden;
-  border-radius:30px;
-  background:rgba(255,255,255,0.08);
-  backdrop-filter:blur(12px);
-  border:1px solid rgba(255,255,255,0.15);
-  box-shadow:0 20px 40px rgba(0,0,0,0.35);
+
+  width:260px;
+
+  background:white;
+
+  padding:15px 15px 65px;
+
+  border-radius:8px;
+
+  position:relative;
+
+  box-shadow:
+
+    0 15px 35px rgba(0,0,0,0.35);
+
   transition:0.5s;
+
+  cursor:pointer;
+
 }
 
-.card:hover{
-  transform:translateY(-12px) scale(1.03);
-}
+/* FOTO */
 
 .card img{
+
   width:100%;
-  height:420px;
+
+  height:320px;
+
   object-fit:cover;
-  transition:0.5s;
+
+  border-radius:3px;
+
 }
 
-.card:hover img{
+/* LEGENDA */
+
+.card p{
+
+  position:absolute;
+
+  bottom:18px;
+
+  left:0;
+
+  width:100%;
+
+  text-align:center;
+
+  color:#555;
+
+  font-size:1rem;
+
+  font-weight:500;
+
+}
+
+/* ROTAÇÕES DIFERENTES */
+
+.card:nth-child(1){
+
+  transform:rotate(-8deg);
+
+}
+
+.card:nth-child(2){
+
+  transform:rotate(7deg);
+
+}
+
+.card:nth-child(3){
+
+  transform:rotate(-5deg);
+
+}
+
+/* FITA ADESIVA */
+
+.card::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:90px;
+
+  height:25px;
+
+  background:rgba(255,255,255,0.45);
+
+  top:-12px;
+
+  left:50%;
+
+  transform:
+
+    translateX(-50%)
+
+    rotate(-5deg);
+
+  backdrop-filter:blur(3px);
+
+}
+
+/* CORAÇÃO */
+
+.card::after{
+
+  content:"💜";
+
+  position:absolute;
+
+  bottom:14px;
+
+  right:18px;
+
+  font-size:1.3rem;
+
+}
+
+/* HOVER */
+
+.card:hover{
+
+  transform:
+
+    rotate(0deg)
+
+    scale(1.1)
+
+    translateY(-15px);
+
+  z-index:20;
+
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+  .gallery{
+
+    gap:35px;
+
+    padding:60px 20px;
+
+  }
+
+  .card{
+
+    width:220px;
+
+  }
+
+  .card img{
+
+    height:280px;
+
+  }
+
+}
   transform:scale(1.08);
 }
 
